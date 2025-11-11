@@ -16,17 +16,16 @@
           <p class="name">&ensp;{{item.bio1}}</p>
         </div>
       </div>
-
       <br />
-
-     <!-- Replace YouTube video with local video -->
-<div class="row justify-content-center">
-  <div class="col-md-8 text-center">
-    <div class="embed-responsive embed-responsive-16by9">
-      <video class="embed-responsive-item" width="560" height="315" controls>
-        <source src="{{ '/assets/img/a.mp4' | relative_url }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="row text-center">
+        <div class="col">
+          <video class="img-fluid" autoplay muted loop playsinline>
+            <source src="{{ '/assets/img/a.mp4' | relative_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
