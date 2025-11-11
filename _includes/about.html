@@ -1,20 +1,25 @@
 <h2>About</h2>
 <div class="container" id="about">
-  <div class="card">
+  <div class="card shadow-sm my-4">
     <div class="card-body">
-      <div class="row">
-        {% for item in site.data.about %}
-        <div class="col-xs text-center">
+      {% for item in site.data.about %}
+      <div class="row align-items-center">
+        
+        <!-- Image Column -->
+        <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+          <img src="{{item.image}}" alt="{{item.name}}" class="profile-pic img-fluid">
+        </div>
+        
+        <!-- Info Column -->
+        <div class="col-12 col-md-8 text-center text-md-start">
+          <h3><strong>Hello there!</strong></h3>
+          <p class="name">{{item.bio1}}</p>
           <p><b>Full Name:</b> {{item.name}}</p>
           <p><b>Contact:</b> {{item.number}}</p>
           <p><b>E-mail:</b> {{item.email}}</p>
           <p><b>Fun Fact:</b> {{item.funfact}}</p>
         </div>
 
-        <div class="col-xl text-center">
-          <h3><strong>Hello there!</strong></h3>
-          <p class="name">&ensp;{{item.bio1}}</p>
-        </div>
       </div>
       {% endfor %}
     </div>
