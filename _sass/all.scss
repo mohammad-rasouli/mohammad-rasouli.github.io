@@ -150,4 +150,33 @@ a {
   transform: scale(1.05);
 }
 
+/* Profile Image Circle */
+.profile-pic {
+  width: 150px;          
+  height: 150px;         
+  border-radius: 50%;    
+  object-fit: cover;     
+  border: 3px solid #ccc; 
+  transition: transform 0.3s; 
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
